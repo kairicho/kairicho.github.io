@@ -9,17 +9,23 @@ on:
       - main
   workflow_dispatch:
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Build static files
         id: build
         run: |
-          # <Not provided for brevity>
-          # At a minimum this step should build the static files of your site
-          # <Not provided for brevity>
+          echo "No build step required for static Pages."
 
       - name: Upload static files as artifact
         id: deployment
@@ -39,6 +45,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
