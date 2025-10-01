@@ -1,28 +1,40 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: [
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    './src/**/*.astro',
+    './src/**/*.html',
+    './src/**/*.js',
+    './src/**/*.jsx',
+    './src/**/*.ts',
+    './src/**/*.tsx',
+    './src/**/*.vue',
+    './src/**/*.svelte',
+    './src/**/*.md',
+    './src/**/*.mdx'
+  ],
   theme: {
     extend: {
       colors: {
         bg: {
-          DEFAULT: 'var(--bg)',
-          secondary: 'var(--bg-secondary)',
+          DEFAULT: '#0a0a0a',
+          secondary: '#111111',
         },
         text: {
-          DEFAULT: 'var(--text)',
-          secondary: 'var(--text-secondary)',
+          DEFAULT: '#ffffff',
+          secondary: '#a1a1aa',
         },
         accent: {
-          DEFAULT: 'var(--accent)',
-          secondary: 'var(--accent-secondary)',
-          tertiary: 'var(--accent-tertiary)',
+          DEFAULT: '#00d4ff',
+          secondary: '#7c3aed',
+          tertiary: '#06b6d4',
         },
-        border: 'var(--border)',
+        border: '#1f1f23',
       },
       backgroundImage: {
-        'gradient-text': 'var(--gradient-text)',
-        'gradient-main': 'var(--gradient)',
-        'gradient-radial': 'radial-gradient(ellipse at center, var(--bg-secondary) 0%, var(--bg) 70%)',
+        'gradient-text': 'linear-gradient(135deg, #00d4ff, #7c3aed)',
+        'gradient-main': 'linear-gradient(135deg, #00d4ff 0%, #7c3aed 50%, #06b6d4 100%)',
+        'gradient-radial': 'radial-gradient(ellipse at center, #111111 0%, #0a0a0a 70%)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

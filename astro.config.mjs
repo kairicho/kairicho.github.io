@@ -8,5 +8,12 @@ export default defineConfig({
   build: {
     assets: 'assets'
   },
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  vite: {
+    css: {
+      postcss: {
+        plugins: []
+      }
+    }
+  }
 });
