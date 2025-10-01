@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark mode (default) */
+:root {
+  --bg: #0a0a0a;
+  --bg-secondary: #111111;
+  --text: #ffffff;
+  --text-secondary: #a1a1aa;
+  --accent: #00d4ff;
+  --accent-secondary: #7c3aed;
+  --accent-tertiary: #06b6d4;
+  --border: #1f1f23;
+  --gradient: linear-gradient(135deg, #00d4ff 0%, #7c3aed 50%, #06b6d4 100%);
+  --gradient-text: linear-gradient(135deg, #00d4ff, #7c3aed);
+  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
 /* Light mode overrides */
 @media (prefers-color-scheme: light) {
   :root {
