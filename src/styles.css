@@ -4,7 +4,7 @@
   --muted: #9aa4ad;
   --link: #58a6ff;
   --border: #25292e;
-  --measure: 72ch;
+    --measure: 90ch;
 }
 
 @media (prefers-color-scheme: light) {
@@ -28,17 +28,21 @@ body {
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.container { max-width: var(--measure); margin: 0 auto; padding: clamp(16px, 4vw, 32px) clamp(12px, 3vw, 20px) clamp(32px, 8vw, 64px); }
+.container { max-width: 100%; margin: 0 auto; padding: clamp(32px, 8vw, 64px) clamp(24px, 6vw, 48px) clamp(64px, 16vw, 128px); }
 
-header { display: grid; gap: 6px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+header { display: grid; gap: 16px; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
 .name { font-size: clamp(22px, 4vw, 32px); font-weight: 700; letter-spacing: 0.2px; }
 .role { color: var(--muted); font-size: clamp(14px, 2.2vw, 18px); }
 .meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: clamp(12px, 2vw, 16px); color: var(--muted); align-items: center; }
 .meta a { display: inline-flex; align-items: center; gap: 6px; color: var(--text); }
-.meta svg { width: 16px; height: 16px; fill: currentColor; }
+.meta svg { width: 1em; height: 1em; fill: currentColor; }
+
+.nav { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 24px 0; padding: 16px 0; border-bottom: 1px solid var(--border); }
+.nav a { color: var(--muted); text-decoration: none; font-size: 14px; padding: 4px 8px; border-radius: 4px; transition: all 0.2s ease; }
+.nav a:hover { color: var(--text); background: var(--border); }
 
 /* Section layout: heading left, content right */
-.section { display: grid; grid-template-columns: clamp(100px, 12vw, 160px) 1fr; column-gap: clamp(8px, 2vw, 20px); row-gap: 4px; margin: clamp(12px, 2.5vw, 20px) 0; }
+.section { display: grid; grid-template-columns: clamp(100px, 12vw, 160px) 1fr; column-gap: clamp(8px, 2vw, 20px); row-gap: 4px; margin: clamp(32px, 6vw, 48px) 0; }
 .section h2 { grid-column: 1; margin: 0; font-size: clamp(10px, 1.6vw, 13px); text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 .section .content { grid-column: 2; }
 
@@ -67,7 +71,7 @@ header { display: grid; gap: 6px; margin-bottom: 12px; padding-bottom: 12px; bor
 
 .experience .item {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   padding-left: 20px;
 }
 
