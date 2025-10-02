@@ -25,7 +25,7 @@ export default {
         'gradient-radial': 'radial-gradient(ellipse at center, #111111 0%, #0a0a0a 70%)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Fira Code', 'Hack', 'Source Code Pro', 'SF Mono', 'Monaco', 'Inconsolata', 'Ubuntu Mono', 'Roboto Mono', 'Menlo', 'Consolas', 'monospace'],
       },
       animation: {
         'float': 'float 20s ease-in-out infinite',
