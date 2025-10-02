@@ -3,13 +3,5 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://kairicho.github.io',
-  base: '/resume/',
-  build: {
-    assets: 'assets'
-  },
-  integrations: [tailwind()],
-  vite: {
-    publicDir: 'public'
-  }
+  integrations: [tailwind()]
 });
