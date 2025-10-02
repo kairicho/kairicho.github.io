@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Force Fira Code font on all elements */
+* {
+  font-family: 'Fira Code', 'Hack', 'Source Code Pro', 'SF Mono', 'Monaco', 'Inconsolata', 'Ubuntu Mono', 'Roboto Mono', 'Menlo', 'Consolas', monospace !important;
+}
 
 /* Custom gradient text */
 .text-gradient {
