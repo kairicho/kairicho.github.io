@@ -45,6 +45,19 @@ jobs:
       - name: Build with Astro
         run: npm run build
         
+      - name: Ensure .nojekyll file is present
+        run: |
+          echo "Checking for .nojekyll file..."
+          if [ -f ".nojekyll" ]; then
+            echo ".nojekyll found in repo root"
+            cp .nojekyll dist/ || echo "Failed to copy .nojekyll to dist/"
+          else
+            echo "Creating .nojekyll file..."
+            touch dist/.nojekyll
+          fi
+          echo "Verifying .nojekyll in dist folder:"
+          ls -la dist/.nojekyll || echo ".nojekyll not found in dist/"
+        
       - name: Verify build output
         run: |
           echo "Build completed. Checking dist folder:"

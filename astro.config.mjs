@@ -5,5 +5,11 @@ export default defineConfig({
   output: 'static',
   site: 'https://kairicho.github.io',
   base: '/resume/',
-  integrations: [tailwind()]
+  build: {
+    assets: 'assets'
+  },
+  integrations: [tailwind()],
+  vite: {
+    publicDir: 'public'
+  }
 });
